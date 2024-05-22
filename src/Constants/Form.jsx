@@ -21,7 +21,6 @@ export function Form() {
   useEffect(() => {
     if (userInfo.username && userInfo.email && userInfo.password) {
       localStorage.setItem("userInfo", JSON.stringify(userInfo));
-      console.log(`User info saved to local storage with key`, userInfo);
     }
   }, [userInfo]);
 
