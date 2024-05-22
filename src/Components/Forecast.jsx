@@ -7,7 +7,6 @@ import WeeklyForeCast from "./WeeklyForeCast";
 
 function Forecast() {
   const selector = useSelector((store) => store.weather);
-  console.log(selector);
 
   if (!selector || selector.length === 0) {
     return (
@@ -18,7 +17,6 @@ function Forecast() {
   }
 
   const current = selector.weatherCointainer[0]?.current;
-  console.log(current);
 
   if (!current || !current.main) {
     return (
